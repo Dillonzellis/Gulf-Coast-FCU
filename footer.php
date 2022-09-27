@@ -20,38 +20,34 @@
         </div>
 
         <div class="large-3 columns footer-logo-area">
-            <?php if( have_rows('add_social_icon', 'options') ): ?>
+
             <ul class="social">
-                <?php while( have_rows('add_social_icon', 'options') ): the_row();
-			        $icon = get_sub_field('label', 'options');
-			        $link = get_sub_field('link_page', 'options');
-			        $popup = get_sub_field('add_popup_type', 'options');
-			        $icon_tag = '<i class="fab fa-'.$icon.'></i>';
-			    ?>
-                <?php// var_dump($popup); ?>
-                <li class="stay-tuned-item <?php echo $icon; ?>">
-                    <?php echo do_shortcode( '[popup_trigger id="'.$popup->ID.'" tag="a" classes="stay-tuned-link" do_default]'.$icon_tag.'[/popup_trigger]' ) ?>
-
+                <li class="stay-tuned-item instagram">
+                    <a class="pum-trigger popmake-259 stay-tuned-link" data-do-default="1" style="cursor: pointer;">
+                        <i class="fab fa-instagram"></i>
+                    </a>
                 </li>
-                <?php endwhile; ?>
+
+                <li class="stay-tuned-item facebook-f">
+                    <a class="pum-trigger popmake-831 stay-tuned-link" data-do-default="1" style="cursor: pointer;">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </li>
+
+                <li class="stay-tuned-item twitter">
+                    <a class="pum-trigger popmake-835 stay-tuned-link" data-do-default="1" style="cursor: pointer;">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
             </ul>
-            <?php endif; ?>
 
-
-            <?php if( have_rows('logo_partners', 'options') ): ?>
-            <ul class="area-logo">
-                <?php while( have_rows('logo_partners', 'options') ): the_row();
-					$logo_footer = get_sub_field('add_logo', 'options');
-					$logo_link = get_sub_field('add_logo_link', 'options');
-					$imag_tag = '<img src="'.$logo_footer['sizes']['large'].'" alt="footer-logo">';
-				?>
+            <ul class=" area-logo">
                 <li>
-                    <?php echo do_shortcode( '[popup_trigger id="'.$logo_link->ID.'" tag="a" classes="stay-tuned-link" do_default]'.$imag_tag.'[/popup_trigger]' ) ?>
+                    <a class="pum-trigger popmake-558 stay-tuned-link" data-do-default="1" style="cursor: pointer;">
+                        <img src="https://ccgcfcu.com/wp-content/uploads/2019/01/ncua-logo.png" alt="footer-logo">
+                    </a>
                 </li>
-                <?php endwhile; ?>
             </ul>
-            <?php endif; ?>
-
         </div>
     </div>
 </div>
